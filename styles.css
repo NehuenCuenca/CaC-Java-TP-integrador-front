@@ -88,6 +88,22 @@ section {
     scroll-margin-block-end: 120px; /*Adds margin to the bottom of the viewport*/
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: var(--purple-dark);
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+border-radius: .5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: .5rem;
+}
+
 .logo{
     font-family: var(--logo-font, Tahoma);
 }
@@ -195,7 +211,6 @@ section {
 }
 .search-movies-form{
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -216,12 +231,14 @@ section {
 .search-movies-form__submit{
     background-color: var(--purple-dark);
     color: var(--orange);
-    padding: .5rem;
+    padding: .5rem 1rem;
     border-radius: .5rem;
     font: normal normal 600 1.4rem var(--default-font);
+    cursor: pointer;
 }
 
-.custom-shape-divider-top-1714410068 {
+.custom-shape-divider-top-1714410068,
+.custom-shape-divider-top-1714416839 {
     position: relative;
     top: 0;
     left: 0;
@@ -230,26 +247,31 @@ section {
     line-height: 0;
 }
 
-.custom-shape-divider-top-1714410068 svg {
+.custom-shape-divider-top-1714410068 svg,
+.custom-shape-divider-top-1714416839 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 150px;
+}
+
+.custom-shape-divider-top-1714410068 svg{
     margin-bottom: 4rem;
 }
 
 .custom-shape-divider-top-1714410068 .shape-fill {
-    fill: #FFFFFF;
+    fill: white;
 }
 
 .new-movies{
-    background-color: #872341;
+    background-color: var(--bordo-dark);
     color: white;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding-bottom: 10rem;
 }
 
 .new-movies__title{
@@ -268,13 +290,14 @@ section {
 }
 
 .new-movie-item{
-    background-color: #BE3144;
+    background-color: var(--bordo-light);
     position: relative;
     transition: scale .4s ease;
 }
 
 .new-movie-item,
-.new-movie-item__image {
+.new-movie-item__image,
+.random-movie-item__image {
     border-radius: .5rem;
     max-width: 200px;
     max-height: 300px;
@@ -297,6 +320,32 @@ section {
     scale: 0.95;
 }
 
+.custom-shape-divider-top-1714416839 .shape-fill {
+    fill: var(--bordo-dark);
+}
+
+.random-movies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+.random-movies__title{
+    font: normal normal 500 clamp(2.5rem, 9vw, 4rem) var(--logo-font);
+    text-align: center;
+    text-wrap: balance;
+    color: var(--bordo-light);
+}
+
+.random-movies-list{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    padding: 1rem 0;
+    overflow-x: scroll;
+}
 
 /* ANIMATIONS */
 @keyframes shakeHorizontal {

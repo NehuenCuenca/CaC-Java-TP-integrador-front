@@ -87,25 +87,23 @@ section {
     font-family: var(--logo-font, Tahoma);
 }
 
-/* .logo__pelis{ color: var(--bordo-light);} */
-/* .logo__flash{ color: var(--orange);} */
 .logo__pelis{ color: var(--orange);}
 .logo__flash{ color: var(--bordo-light);}
 
 .header{
-    min-height: 30vh;
+    min-height: 20vh;
     background-color: var(--purple-dark);
     color: var(--orange);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    /* gap: 1rem; */
     padding: .5rem;
     
     @media (width >= 650px) {
+        min-height: 15vh;
         flex-direction: row;
-        padding: .5rem 2rem;
+        justify-content: space-between;
+        padding: 0 2rem;
     }
 }
 
@@ -114,10 +112,43 @@ section {
 }
 
 .nav-links{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: .5rem 1rem;
+}
+
+.hero{
+    height: 80vh;
+    padding: 1rem;
+    text-align: center;
+    text-wrap: balance;
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(./assets/hero-background.webp);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+
+    @media (width >= 650px) {
+        height: 85vh;
+    }
+}
+
+.hero__title{
+    font: normal normal 500 clamp(2.5rem, 9vw, 4.5rem) var(--logo-font);
+}
+.hero__subtitle{
+    font: normal normal 200 clamp(1.5rem, 5vw, 2.4rem) var(--default-font);
+}
+.register-link{
+    background-color: var(--purple-dark);
+    color: var(--orange);
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font: normal normal 600 1.7rem var(--default-font);
 }

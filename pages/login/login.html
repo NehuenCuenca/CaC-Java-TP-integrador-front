@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../utils/resets.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>PelisFlash | Login</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../../index.html" class="logo logo-hover">
+            <span class="logo__pelis">Pelis</span><span class="logo__flash">Flash</span>
+        </a>
+    </header>
+    <main class="main-container">
+        <form class="login-form">
+            <h1 class="login-form__title">Ingresá a <span class="logo__pelis">Pelis</span><span class="logo__flash">Flash</span></h1>
+            <div class="field">
+                <label for="input-email" class="field__label">Email</label>
+                <input type="email" name="input-email" id="input-email" class="field__input" required>
+            </div>
+            <div class="field">
+                <label for="input-password" class="field__label">Contraseña</label>
+                <input type="password" name="input-password" id="input-password" class="field__input" required>
+            </div>
+            <input class="login-form__submit" type="submit" value="Iniciar sesión">
+        </form>
+    </main>
+</body>
+</html>
